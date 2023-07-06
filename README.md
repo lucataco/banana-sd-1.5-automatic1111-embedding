@@ -1,13 +1,12 @@
-
 # 🍌 Stable Diffusion WebUI for banana (Stable Diffusion 1.5)
 
 Deploy an API for AUTOMATIC1111's [Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) to generate images with **Stable Diffusion 1.5**.
 
 Supports features not available in other Stable Diffusion templates, such as:
 
-* [Prompt emphasis](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#attentionemphasis)
-* [Prompt editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing)
-* [Unlimited prompt length](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#infinite-prompt-length)
+- [Prompt emphasis](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#attentionemphasis)
+- [Prompt editing](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#prompt-editing)
+- [Unlimited prompt length](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Features#infinite-prompt-length)
 
 This deployment provides an API only and does not include the WebUI's user interface. Please report any issues you encounter.
 
@@ -33,8 +32,8 @@ This deployment provides an API only and does not include the WebUI's user inter
     "n_iter": 1,
     "width": 512,
     "height": 512,
-    "tiling": false
-    
+    "tiling": False
+
   }
 }
 ```
@@ -87,3 +86,13 @@ Output:
   ]
 }
 ```
+
+### Notes:
+
+`docker build -t auto .`
+
+`docker run --gpus=all -p 8000:8000 auto`
+
+`python test.py`
+
+Place embeddings in: /app/stable-diffusion-webui/embeddings
