@@ -2,7 +2,7 @@ import torch
 import modules.safe as safe
 import webui
 
-torch.load = safe.unsafe_torch_load
+# torch.load = safe.unsafe_torch_load
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 def noop(*args, **kwargs):

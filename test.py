@@ -17,7 +17,7 @@ model_inputs = {
     "tiling": False
 }
 res = requests.post('http://localhost:8000/', json = model_inputs)
-
+print(res.json())
 base64_output = res.json()["base64_output"]
 image_encoded = base64_output.encode('utf-8')
 image_bytes = BytesIO(base64.b64decode(image_encoded))
